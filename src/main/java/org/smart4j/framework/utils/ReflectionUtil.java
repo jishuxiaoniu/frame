@@ -42,7 +42,8 @@ public class ReflectionUtil {
 
         Object result;
         try {
-            result = method.invoke(obj, args);
+            method.setAccessible(true);
+            result = method.invoke(obj, (Object[]) args);
         } catch (Exception e) {
             log.error("method invoke failure", e);
             throw new RuntimeException(e);

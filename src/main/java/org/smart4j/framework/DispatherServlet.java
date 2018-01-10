@@ -54,7 +54,8 @@ public class DispatherServlet extends HttpServlet {
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // 获取请求的方法与路径
         String requestMethod = req.getMethod().toLowerCase();
-        String requestPath = req.getPathInfo();
+//        String requestPath = req.getPathInfo();
+        String requestPath = req.getServletPath();
         // 获取 action 处理器
         Handler handler = ControllerHelper.getHandler(requestMethod, requestPath);
         if (handler != null) {

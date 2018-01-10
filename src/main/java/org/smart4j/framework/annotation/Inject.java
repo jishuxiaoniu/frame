@@ -7,7 +7,7 @@ import java.lang.annotation.*;
  * @Description: 依赖注入注解
  * @Date: Created in 上午10:46 2018/1/10
  */
-@Target(ElementType.TYPE)
+@Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Inherited
